@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block content %}
+<div id="banner">
+    <div class="container">
+        <div class="title">
+            <h2>Leopard</h2>
+            <span class="byline">My cool Leopard app, which can read from that cool Iguana app!</span></div>
+    </div>
+</div>
+<div id="extra" class="container">
+    <div class="title">
+        <h2>API Queries</h2>
+        <span class="byline">Demo the various methods of webapp to webapp authentication</span></div>
+    <div id="three-column">
+        <div class="boxA">
+            <div class="box">
+                <p>No Authentication</p>
+                <ul class="actions">
+                    <li><a href="{% url 'client:no_auth' %}" class="button">No Auth</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="boxB">
+            <div class="box">
+                <p>HTTP Basic Authentication</p>
+                <ul class="actions">
+                    <li><a href="{% url 'client:basic_auth' %}" class="button">Basic Auth</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="boxC">
+            <div class="box">
+                <p>HTTP Token Authentication</p>
+                <ul class="actions">
+                    <li><a href="{% url 'client:token_auth' %}" class="button">Token Auth</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

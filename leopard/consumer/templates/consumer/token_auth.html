@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+<div id="extra" class="container">
+    <div class="title">
+        <h2>Token Auth Query</h2>
+        <span class="byline">Perform a simple 'GET' to the Iguana users API with token authentication.</span>
+    </div>
+    <div id="banner" class="content">
+        <form id="basic" method="post" action="{% url 'client:token_auth' %}">
+            {% csrf_token %}
+            {{ form }}
+            <button type="submit" form="basic" value="Submit">Submit</button>
+        </form>
+        <p>
+        {% if info %}{{ info }}<br>{% endif %}
+        {% if info2 %}{{ info2 }}{% endif %}
+        </p>
+    </div>
+    <div id="content">
+    <pre>
+            <code>{{ output }}</code>
+    </pre>
+    </div>
+</div>
+{% endblock %}

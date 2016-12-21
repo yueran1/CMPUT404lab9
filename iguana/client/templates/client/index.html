@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block body %}
+
+<!-- Main -->
+<section id="main" class="wrapper">
+    <div class="container">
+        <header class="major">
+            <h2>Iguana App</h2>
+            <p>My cool Iguana app, with OAuth!</p>
+        </header>
+        <p>User: {{ request.user }}</p>
+        <a href="#" class="image fit"><img src="{% static 'images/iguana.jpg' %}" alt=""/></a>
+    </div>
+</section>
+{% endblock %}
